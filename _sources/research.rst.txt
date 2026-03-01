@@ -6,3 +6,4 @@ Research Notes
    :caption: Research
 
    research/spatialvlm
+   research/agentic_search
