@@ -314,6 +314,47 @@
 <p>—</p>
 <p><em>This is a living document. More papers will be added as the field evolves.</em></p>
 </section>
+<section id="datasets-benchmarks">
+<h2>Datasets &amp; Benchmarks<a class="headerlink" href="#datasets-benchmarks" title="Link to this heading">¶</a></h2>
+<p>As the field matures, several benchmarks have been introduced to evaluate agents’ search and reasoning capabilities:</p>
+<p><strong>SimpleQA (OpenAI, 2024)</strong></p>
+<ul class="simple">
+<li><p><strong>Focus</strong>: Evaluating factuality in short-form answers</p></li>
+<li><p><strong>Key characteristics</strong>:
+- Questions require factual, specific answers
+- Designed to test whether models know what they don’t know
+- Measures calibration: confidence vs. accuracy
+- Strict correctness criteria — minor errors lead to wrong answers</p></li>
+</ul>
+<p><strong>SimpleQA Verified (DeepMind, 2025)</strong></p>
+<ul class="simple">
+<li><p><strong>Focus</strong>: Addressing reliability issues in SimpleQA</p></li>
+<li><p><strong>Improvements over SimpleQA</strong>:
+- All answers verified by human annotators with access to Wikipedia
+- Stricter answer validation criteria
+- Better coverage of uncertainty scenarios
+- More balanced difficulty distribution</p></li>
+</ul>
+<p><strong>DeepSearchQA (DeepMind, 2025)</strong></p>
+<ul class="simple">
+<li><p><strong>Focus</strong>: Multi-step search and reasoning over long contexts</p></li>
+<li><p><strong>Improvements over SimpleQA Verified</strong>:
+- Requires <strong>multiple search steps</strong> to gather information
+- Questions demand synthesis across multiple sources
+- Tests <strong>planning</strong> and <strong>iterative refinement</strong> of search strategy
+- Includes questions where initial search queries need refinement based on intermediate results
+- Longer answer contexts (multi-sentence vs. short phrases)</p></li>
+</ul>
+<section id="evolution-summary">
+<h3>Evolution Summary<a class="headerlink" href="#evolution-summary" title="Link to this heading">¶</a></h3>
+<ul class="simple">
+<li><p><strong>SimpleQA</strong> → established the baseline for factual QA</p></li>
+<li><p><strong>SimpleQA Verified</strong> → improved reliability and annotation quality</p></li>
+<li><p><strong>DeepSearchQA</strong> → extended to <strong>agentic, multi-step search</strong> scenarios</p></li>
+</ul>
+<p>This progression mirrors the shift from passive retrieval to active, planning-based agentic search.</p>
+</section>
+</section>
 </section>
 
         </article>
@@ -369,6 +410,10 @@
 <li><a class="reference internal" href="#agent-architectures">Agent Architectures</a></li>
 <li><a class="reference internal" href="#search-retrieval-focus">Search &amp; Retrieval Focus</a></li>
 <li><a class="reference internal" href="#future-directions">Future Directions</a></li>
+<li><a class="reference internal" href="#datasets-benchmarks">Datasets &amp; Benchmarks</a><ul>
+<li><a class="reference internal" href="#evolution-summary">Evolution Summary</a></li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>
