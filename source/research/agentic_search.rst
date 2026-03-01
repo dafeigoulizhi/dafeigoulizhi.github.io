@@ -86,3 +86,45 @@ Future Directions
 ---
 
 *This is a living document. More papers will be added as the field evolves.*
+
+Datasets & Benchmarks
+----------------------
+
+As the field matures, several benchmarks have been introduced to evaluate agents' search and reasoning capabilities:
+
+**SimpleQA (OpenAI, 2024)**
+
+- **Focus**: Evaluating factuality in short-form answers
+- **Key characteristics**:
+  - Questions require factual, specific answers
+  - Designed to test whether models know what they don't know
+  - Measures calibration: confidence vs. accuracy
+  - Strict correctness criteria — minor errors lead to wrong answers
+  
+**SimpleQA Verified (DeepMind, 2025)**
+
+- **Focus**: Addressing reliability issues in SimpleQA
+- **Improvements over SimpleQA**:
+  - All answers verified by human annotators with access to Wikipedia
+  - Stricter answer validation criteria
+  - Better coverage of uncertainty scenarios
+  - More balanced difficulty distribution
+  
+**DeepSearchQA (DeepMind, 2025)**
+
+- **Focus**: Multi-step search and reasoning over long contexts
+- **Improvements over SimpleQA Verified**:
+  - Requires **multiple search steps** to gather information
+  - Questions demand synthesis across multiple sources
+  - Tests **planning** and **iterative refinement** of search strategy
+  - Includes questions where initial search queries need refinement based on intermediate results
+  - Longer answer contexts (multi-sentence vs. short phrases)
+
+Evolution Summary
+"""""""""""""""""
+
+- **SimpleQA** → established the baseline for factual QA
+- **SimpleQA Verified** → improved reliability and annotation quality
+- **DeepSearchQA** → extended to **agentic, multi-step search** scenarios
+
+This progression mirrors the shift from passive retrieval to active, planning-based agentic search.
