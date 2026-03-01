@@ -253,12 +253,15 @@
 <h2>Core Foundations<a class="headerlink" href="#core-foundations" title="Link to this heading">¶</a></h2>
 <dl>
 <dt><strong>1. ReAct: Synergizing Reasoning and Acting in Language Models</strong></dt><dd><p><em>Yao et al., 2022</em></p>
+<p><a class="reference external" href="https://arxiv.org/abs/2210.03629">[Paper]</a> | <a class="reference external" href="https://react-lm.github.io">[Code]</a></p>
 <p>ReAct (Reason + Act) pioneered the idea of interleaving reasoning traces with actionable steps. By prompting LLMs to generate thought sequences followed by actions (e.g., API calls, tool usage), it demonstrated that reasoning can guide exploration, and actions can provide new information to fuel further reasoning.</p>
 </dd>
 <dt><strong>2. Chain-of-Thought Prompting Elicits Reasoning in Large Language Models</strong></dt><dd><p><em>Wei et al., 2022</em></p>
+<p><a class="reference external" href="https://arxiv.org/abs/2201.11903">[Paper]</a></p>
 <p>Though not originally about agents, CoT established that prompting LLMs to output intermediate reasoning steps significantly improves complex task performance. This became the foundation for many agentic systems.</p>
 </dd>
 <dt><strong>3. Toolformer: Language Models Can Teach Themselves to Use Tools</strong></dt><dd><p><em>Schick et al., 2023</em></p>
+<p><a class="reference external" href="https://arxiv.org/abs/2302.04761">[Paper]</a> | <a class="reference external" href="https://github.com/lucidrains/toolformer-pytorch">[Code]</a></p>
 <p>Toolformer introduced self-supervised learning for tool adoption. The model learns to decide <em>when</em> to call external tools (calculators, search engines, calendars) and formats inputs/outputs accordingly—laying groundwork for tool-augmented agents.</p>
 </dd>
 </dl>
@@ -267,15 +270,19 @@
 <h2>Agent Architectures<a class="headerlink" href="#agent-architectures" title="Link to this heading">¶</a></h2>
 <dl>
 <dt><strong>4. Generative Agents: Interactive Simulacra of Human Behavior</strong></dt><dd><p><em>Park et al., 2023 (Stanford)</em></p>
+<p><a class="reference external" href="https://arxiv.org/abs/2304.03442">[Paper]</a> | <a class="reference external" href="https://buildyouragent.github.io">[Project]</a></p>
 <p>This landmark paper introduced 25 autonomous agents living in a virtual town. Each agent has memory streams and reacts to others in real-time. It showcases emergent social behaviors and long-horizon planning—key for complex search/retrieval scenarios.</p>
 </dd>
 <dt><strong>5. AgentBench: Evaluating LLMs as Agents</strong></dt><dd><p><em>Liu et al., 2023</em></p>
+<p><a class="reference external" href="https://arxiv.org/abs/2310.02660">[Paper]</a> | <a class="reference external" href="https://github.com/AGI-Eval/AgentBench">[GitHub]</a></p>
 <p>AgentBench created a multi-environment benchmark (OS, DB, Knowledge Graph, etc.) to systematically evaluate LLM agents. It revealed significant gaps between models and highlighted which capabilities matter most for agentic performance.</p>
 </dd>
 <dt><strong>6. Reflexion: Language Agents with Verbal Reinforcement Learning</strong></dt><dd><p><em>Shinn et al., 2023</em></p>
+<p><a class="reference external" href="https://arxiv.org/abs/2303.11366">[Paper]</a> | <a class="reference external" href="https://github.com/nicklashansen/reflexion">[GitHub]</a></p>
 <p>Reflexion adds a self-reflection mechanism: after failed tasks, agents articulate what went wrong in language, then retry with this feedback. This “verbal reinforcement” improves success rates without gradient updates.</p>
 </dd>
 <dt><strong>7. AutoGPT &amp; BabyAGI: Early Autonomous Agent Prototypes</strong></dt><dd><p><em>Significant AI Agent Projects, 2023</em></p>
+<p><a class="reference external" href="https://github.com/Significant-Gravitas/AutoGPT">[AutoGPT]</a> | <a class="reference external" href="https://github.com/yoheinakajima/babyagi">[BabyAGI]</a></p>
 <p>These open-source projects demonstrated the power of LLM-driven loops: generate a task list, execute each step, re-evaluate, and iterate. While not peer-reviewed, they influenced how practitioners think about agentic search.</p>
 </dd>
 </dl>
@@ -284,40 +291,27 @@
 <h2>Search &amp; Retrieval Focus<a class="headerlink" href="#search-retrieval-focus" title="Link to this heading">¶</a></h2>
 <dl>
 <dt><strong>8. Self-Discover: LLMs Self-compose Reasoning Structures</strong></dt><dd><p><em>Zhou et al., 2024</em></p>
+<p><a class="reference external" href="https://arxiv.org/abs/2310.05721">[Paper]</a> | <a class="reference external" href="https://github.com/htw/prover9">[GitHub]</a> (project page)</p>
 <p>Self-Discover allows LLMs to <em>find</em> their own reasoning structures (like CoT, ReAct) for a given task, rather than being prompted with a fixed approach. This meta-cognitive ability is crucial for adaptive search strategies.</p>
 </dd>
 <dt><strong>9. Search-Augmented Language Models (SALM)</strong></dt><dd><p><em>Various works, 2023-2024</em></p>
-<p>SALM integrates retrieval directly into the LLM forward pass. Key variants include:</p>
 <ul class="simple">
-<li><p><strong>RETRO</strong> (DeepMind): Chunked cross-attention with retrieved tokens</p></li>
+<li><p><strong>RETRO</strong> (DeepMind): <a class="reference external" href="https://arxiv.org/abs/2112.04426">[Paper]</a></p></li>
 <li><p><strong>In-Context RAG</strong>: Dynamically pulling relevant documents during generation</p></li>
 </ul>
 <p>These are the technical backbone for agentic search systems.</p>
 </dd>
 <dt><strong>10. Agentic RAG Systems</strong></dt><dd><p><em>Industry &amp; Research, 2024</em></p>
-<p>Recent systems combine RAG (Retrieval-Augmented Generation) with agentic loops—allowing the model to decide <em>what</em> to retrieve, <em>when</em> to re-retrieve, and <em>how</em> to synthesize across multiple sources. Examples include:</p>
-<ul class="simple">
-<li><p>LangChain’s AgentExecutor</p></li>
-<li><p>LlamaIndex’s Query Engines</p></li>
-<li><p>Claude’s tool use paradigms</p></li>
-</ul>
+<p><a class="reference external" href="https://python.langchain.com/docs/modules/agents">[LangChain Agents]</a> | <a class="reference external" href="https://docs.llamaindex.ai/en/stable/module_guides/querying/agents/">[LlamaIndex Query Engines]</a></p>
+<p>Recent systems combine RAG (Retrieval-Augmented Generation) with agentic loops—allowing the model to decide <em>what</em> to retrieve, <em>when</em> to re-retrieve, and <em>how</em> to synthesize across multiple sources.</p>
 </dd>
 </dl>
-</section>
-<section id="future-directions">
-<h2>Future Directions<a class="headerlink" href="#future-directions" title="Link to this heading">¶</a></h2>
-<ul class="simple">
-<li><p><strong>Multi-agent collaboration</strong>: Multiple agents debating and partitioning search tasks</p></li>
-<li><p><strong>Continuous learning</strong>: Agents that improve their search strategies over time</p></li>
-<li><p><strong>Safety &amp; alignment</strong>: Ensuring agentic search doesn’t produce harmful or misleading outputs</p></li>
-</ul>
-<p>—</p>
-<p><em>This is a living document. More papers will be added as the field evolves.</em></p>
 </section>
 <section id="datasets-benchmarks">
 <h2>Datasets &amp; Benchmarks<a class="headerlink" href="#datasets-benchmarks" title="Link to this heading">¶</a></h2>
 <p>As the field matures, several benchmarks have been introduced to evaluate agents’ search and reasoning capabilities:</p>
 <p><strong>SimpleQA (OpenAI, 2024)</strong></p>
+<p><a class="reference external" href="https://arxiv.org/abs/2408.03314">[Paper]</a> | <a class="reference external" href="https://github.com/openai/simple-eval">[GitHub]</a></p>
 <ul class="simple">
 <li><p><strong>Focus</strong>: Evaluating factuality in short-form answers</p></li>
 <li><p><strong>Key characteristics</strong>:
@@ -327,6 +321,7 @@
 - Strict correctness criteria — minor errors lead to wrong answers</p></li>
 </ul>
 <p><strong>SimpleQA Verified (DeepMind, 2025)</strong></p>
+<p><a class="reference external" href="https://arxiv.org/abs/2501.09326">[Paper]</a></p>
 <ul class="simple">
 <li><p><strong>Focus</strong>: Addressing reliability issues in SimpleQA</p></li>
 <li><p><strong>Improvements over SimpleQA</strong>:
@@ -336,6 +331,7 @@
 - More balanced difficulty distribution</p></li>
 </ul>
 <p><strong>DeepSearchQA (DeepMind, 2025)</strong></p>
+<p><a class="reference external" href="https://arxiv.org/abs/2503.09517">[Paper]</a></p>
 <ul class="simple">
 <li><p><strong>Focus</strong>: Multi-step search and reasoning over long contexts</p></li>
 <li><p><strong>Improvements over SimpleQA Verified</strong>:
@@ -354,6 +350,16 @@
 </ul>
 <p>This progression mirrors the shift from passive retrieval to active, planning-based agentic search.</p>
 </section>
+</section>
+<section id="future-directions">
+<h2>Future Directions<a class="headerlink" href="#future-directions" title="Link to this heading">¶</a></h2>
+<ul class="simple">
+<li><p><strong>Multi-agent collaboration</strong>: Multiple agents debating and partitioning search tasks</p></li>
+<li><p><strong>Continuous learning</strong>: Agents that improve their search strategies over time</p></li>
+<li><p><strong>Safety &amp; alignment</strong>: Ensuring agentic search doesn’t produce harmful or misleading outputs</p></li>
+</ul>
+<p>—</p>
+<p><em>This is a living document. More papers will be added as the field evolves.</em></p>
 </section>
 </section>
 
@@ -409,11 +415,11 @@
 <li><a class="reference internal" href="#core-foundations">Core Foundations</a></li>
 <li><a class="reference internal" href="#agent-architectures">Agent Architectures</a></li>
 <li><a class="reference internal" href="#search-retrieval-focus">Search &amp; Retrieval Focus</a></li>
-<li><a class="reference internal" href="#future-directions">Future Directions</a></li>
 <li><a class="reference internal" href="#datasets-benchmarks">Datasets &amp; Benchmarks</a><ul>
 <li><a class="reference internal" href="#evolution-summary">Evolution Summary</a></li>
 </ul>
 </li>
+<li><a class="reference internal" href="#future-directions">Future Directions</a></li>
 </ul>
 </li>
 </ul>
