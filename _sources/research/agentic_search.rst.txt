@@ -95,7 +95,7 @@ As the field matures, several benchmarks have been introduced to evaluate agents
 
 **SimpleQA (OpenAI, 2024)**
 
-`[Paper] <https://arxiv.org/abs/2408.03314>`_ | `[GitHub] <https://github.com/openai/simple-eval>`_
+`[Blog] <https://openai.com/index/introducing-simpleqa/>`_ | `[GitHub] <https://github.com/openai/simple-eval>`_
 
 - **Focus**: Evaluating factuality in short-form answers
 - **Key characteristics**:
@@ -106,7 +106,7 @@ As the field matures, several benchmarks have been introduced to evaluate agents
   
 **SimpleQA Verified (DeepMind, 2025)**
 
-`[Paper] <https://arxiv.org/abs/2501.09326>`_
+`[Paper] <https://arxiv.org/abs/2509.07968>`_
 
 - **Focus**: Addressing reliability issues in SimpleQA
 - **Improvements over SimpleQA**:
@@ -117,7 +117,7 @@ As the field matures, several benchmarks have been introduced to evaluate agents
   
 **DeepSearchQA (DeepMind, 2025)**
 
-`[Paper] <https://arxiv.org/abs/2503.09517>`_
+`[Kaggle] <https://www.kaggle.com/benchmarks/google/dsqa/leaderboard>`_
 
 - **Focus**: Multi-step search and reasoning over long contexts
 - **Improvements over SimpleQA Verified**:
